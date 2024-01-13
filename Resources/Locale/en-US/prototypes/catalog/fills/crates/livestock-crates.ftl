@@ -63,3 +63,6 @@ ent-CrateNPCLizard = Lizard crate
 
 ent-CrateNPCKangaroo = Kangaroo crate
     .desc = A crate containing a kangaroo.
+
+ent-CrateNPCTurtle = Sea turtle crate
+    .desc = A crate containing a sea turtle.

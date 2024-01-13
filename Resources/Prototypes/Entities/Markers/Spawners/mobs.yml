@@ -812,6 +812,34 @@
       - MobSpawnCrabSilver
 
 - type: entity
+  name: Sea turtle Spawner
+  id: SpawnMobTurtle
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+    - state: green
+    - state: turtle
+      sprite: Mobs/Animals/turtle.rsi
+  - type: ConditionalSpawner
+    prototypes:
+    - MobTurtle
+
+- type: entity
+  name: Squirt Spawner
+  id: SpawnMobTurtleSquirt
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+    - state: green
+    - state: turtle
+      sprite: Mobs/Animals/turtle.rsi
+  - type: ConditionalSpawner
+    prototypes:
+    - MobTurtleSquirt
+
+- type: entity
   name: luminous person spawner
   id: SpawnMobLuminousPerson
   parent: MarkerBase
