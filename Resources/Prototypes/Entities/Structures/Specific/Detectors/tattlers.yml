@@ -1,0 +1,22 @@
+- type: entity
+  id: BackscatterMachine
+  parent: PlasticFlapsClear
+  name: backscatter x-ray scanner
+  suffix: Gun Detector
+  description: I wonder if it can see my bones?
+  components:
+  - type: ProximityBeeper
+  - type: ProximityDetector
+    criteria:
+      components:
+      - Gun
+    range: 0.45
+    updateRate: 0.15
+  - type: Beeper
+    enabled: false
+    minBeepInterval: 2
+    beepSound:
+      path: /Audio/Machines/warning_buzzer.ogg
+      params:
+        maxDistance: 1
+        volume: -6

@@ -338,11 +338,11 @@
 - type: Tag
   id: CluwneHorn
 
-- type: Tag #Ohioans die happy
-  id: Corn
-
 - type: Tag
   id: Coldsauce
+
+- type: Tag #Ohioans die happy
+  id: Corn
 
 - type: Tag
   id: Cow
