@@ -594,6 +594,8 @@
     interactSuccessSpawn: EffectHearts
     interactSuccessSound:
       path: /Audio/Animals/duck_quack_happy.ogg
+  - type: WaddleAnimation
+    tumbleIntensity: 10 # smaller than clown shoes
   - type: Bloodstream
     bloodMaxVolume: 100
   - type: EggLayer
