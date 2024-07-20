@@ -186,6 +186,8 @@ namespace Content.IntegrationTests.Tests
                     throw new Exception($"Failed to load map {mapProto}", ex);
                 }
 
+                Assert.That(mapSystem.IsPaused(mapId), Is.False);
+
                 mapSystem.CreateMap(out var shuttleMap);
                 var largest = 0f;
                 EntityUid? targetGrid = null;
