@@ -47,6 +47,13 @@
     noAirWhenFullyAirBlocked: false
 
 - type: entity
+  id: HoloFanLong
+  parent: HoloFan
+  components:
+  - type: TimedDespawn
+    lifetime: 300
+
+- type: entity
   id: HolosignSecurity
   parent: HolosignWetFloor
   name: holographic barrier
