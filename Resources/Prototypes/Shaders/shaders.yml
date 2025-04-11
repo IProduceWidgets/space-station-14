@@ -114,3 +114,8 @@
   id: RadialMenu
   kind: source
   path: "/Textures/Shaders/radial-menu.swsl"
+  
+- type: shader
+  id: SepiaFullscreen
+  kind: source
+  path: "/Textures/Shaders/sepia_fullscreen.swsl"
