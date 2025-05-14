@@ -87,7 +87,7 @@
         path: /Audio/Effects/bite.ogg
 
 - type: entity
-  parent: BaseMobCarp
+  parent: [ BaseMobCarp, LesserSimpleMobReactivity ]
   id: MobCarp
   components:
   - type: Sprite
@@ -106,7 +106,7 @@
 
 - type: entity
   name: magicarp
-  parent: BaseMobCarp
+  parent: [ BaseMobCarp, LesserSimpleMobReactivity ]
   id: MobCarpMagic
   description: Looks like some kind of fish. Might be magical.
   components:

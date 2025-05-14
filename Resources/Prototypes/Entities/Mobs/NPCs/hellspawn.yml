@@ -4,6 +4,7 @@
   - BaseSimpleMob
   - MobCombat
   - MobBloodstream
+  - LesserSimpleMobReactivity
   id: MobHellspawn
   description: An unstoppable force of carnage.
   components:

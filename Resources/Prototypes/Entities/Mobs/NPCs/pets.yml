@@ -213,7 +213,7 @@
 
 - type: entity
   name: Bingus
-  parent: [SimpleMobBase, StripableInventoryBase]
+  parent: [ SimpleMobBase, StripableInventoryBase, LesserSimpleMobReactivity ] # im sure theres a sane reason bingus doesnt inherit from the basecat
   id: MobBingus
   description: Bingus my beloved...
   components:
@@ -270,7 +270,7 @@
 
 - type: entity
   name: McGriff
-  parent: [SimpleMobBase, StripableInventoryBase]
+  parent: [ SimpleMobBase, StripableInventoryBase, LesserSimpleMobReactivity ] # why no base dog?
   id: MobMcGriff
   description: This dog can tell something smells around here, and that something is CRIME!
   components:
@@ -366,7 +366,7 @@
 
 - type: entity
   name: Walter
-  parent: [SimpleMobBase, StripableInventoryBase]
+  parent: [ SimpleMobBase, StripableInventoryBase, LesserSimpleMobReactivity ]
   id: MobWalter
   description: He likes chems and treats. Walter.
   components:

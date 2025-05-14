@@ -238,3 +238,24 @@
     bloodlossHealDamage:
       types:
         Bloodloss: -1
+
+# For reactivity we want on most simple mobs, but not humans, bosses, etc.
+- type: entity
+  id: LesserSimpleMobReactivity
+  abstract: true
+  components:
+  - type: Reactive
+    groups:
+      Flammable: [Touch]
+      Extinguish: [Touch]
+      Acidic: [Touch, Ingestion]
+    reactions:
+    - reagents: [ ChloralHydrate ] # RIP Harmabe May 27, 1999 - May 28, 2016
+      methods: [ Ingestion, Injection ]
+      effects:
+      - !type:GenericStatusEffect
+        key: Drowsiness
+        component: Drowsiness
+        time: 6
+        type: Add
+        refresh: false

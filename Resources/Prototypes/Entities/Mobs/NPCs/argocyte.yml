@@ -52,7 +52,7 @@
     group: GenericNumber
 
 - type: entity
-  parent: BaseMobArgocyte
+  parent: [ BaseMobArgocyte, LesserSimpleMobReactivity ]
   id: MobArgocyteSlurva
   name: slurva
   description: A pathetic creature, incapable of doing much.
@@ -88,7 +88,7 @@
 
 - type: entity
   parent: BaseMobArgocyte
-  id: MobArgocyteBarrier
+  id: [ MobArgocyteBarrier, , LesserSimpleMobReactivity ]
   name: barrier
   components:
   - type: Sprite
@@ -129,8 +129,7 @@
         Blunt: 3
 
 - type: entity
-  parent: BaseMobArgocyte
-  id: MobArgocyteSkitter
+  parent: BaseMobArgocyte, LesserSimpleMobReactivity ]
   name: skitter
   description: A devious little alien... Make sure they don't run off with your rations!
   components:
@@ -170,7 +169,7 @@
 
 - type: entity
   parent: BaseMobArgocyte
-  id: MobArgocyteSwiper
+  id: [ MobArgocyteSwiper, LesserSimpleMobReactivity ]
   name: swiper
   description: Where did that stack of steel go?
   components:
@@ -197,7 +196,7 @@
 
 - type: entity
   parent: BaseMobArgocyte
-  id: MobArgocyteMolder
+  id: [ MobArgocyteMolder, LesserSimpleMobReactivity ]
   name: molder
   components:
   - type: Sprite
@@ -224,7 +223,7 @@
 
 - type: entity
   parent: BaseMobArgocyte
-  id: MobArgocytePouncer
+  id: [ MobArgocytePouncer, LesserSimpleMobReactivity ]
   name: pouncer
   components:
   - type: Sprite
@@ -253,7 +252,7 @@
 
 - type: entity
   parent: BaseMobArgocyte
-  id: MobArgocyteGlider
+  id: [ MobArgocyteGlider, LesserSimpleMobReactivity ]
   name: glider
   components:
   - type: Sprite

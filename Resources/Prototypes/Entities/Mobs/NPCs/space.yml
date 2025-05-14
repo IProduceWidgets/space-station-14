@@ -71,7 +71,7 @@
 - type: entity
   name: space bear
   id: MobBearSpace
-  parent: MobSpaceBasic
+  parent: [ MobSpaceBasic, LesserSimpleMobReactivity ]
   description: It looks friendly. Why don't you give it a hug?
   components:
   - type: Sprite
@@ -121,7 +121,7 @@
 - type: entity
   name: space kangaroo
   id: MobKangarooSpace
-  parent: [MobSpaceBasic, StripableInventoryBase]
+  parent: [ MobSpaceBasic, StripableInventoryBase, LesserSimpleMobReactivity ]
   description: It looks friendly. Why don't you give it a hug?
   components:
   - type: Sprite
@@ -179,7 +179,7 @@
 - type: entity
   name: space spider
   id: MobSpiderSpace
-  parent: MobSpaceBasic
+  parent: [ MobSpaceBasic, LesserSimpleMobReactivity ]
   description: It's so glowing, it looks dangerous.
   components:
   - type: Sprite
@@ -277,7 +277,7 @@
 - type: entity
   name: space cobra
   id: MobCobraSpace
-  parent: MobSpaceBasic
+  parent: [ MobSpaceBasic, LesserSimpleMobReactivity ]
   description: Long fangs and a glowing hood, and the alluring look begs to come closer.
   components:
     - type: Sprite
@@ -372,7 +372,7 @@
     - type: SalvageMobRestrictions
 
 - type: entity
-  parent: SimpleSpaceMobBase
+  parent: [ SimpleSpaceMobBase, LesserSimpleMobReactivity ]
   id: MobSnail
   name: snail
   description: Revolting unless you're french.
