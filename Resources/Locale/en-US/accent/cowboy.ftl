@@ -176,7 +176,7 @@ accent-cowboy-words-59 = pal
 accent-cowboy-replacement-59 = partner
 
 accent-cowboy-words-60 = party
-accent-cowboy-replacement-60 = shindig
+accent-cowboy-replacement-60 = hoedown
 
 accent-cowboy-words-61 = passenger
 accent-cowboy-replacement-61 = greenhorn
