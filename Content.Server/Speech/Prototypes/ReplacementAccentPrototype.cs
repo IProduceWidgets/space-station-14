@@ -28,4 +28,11 @@ public sealed partial class ReplacementAccentPrototype : IPrototype
     /// </summary>
     [DataField]
     public float ReplacementChance = 1f;
+
+    /// <summary>
+    /// Allows the user to override the accent by saying the same string twice.
+    /// or with dashes if their message ends in "--"
+    /// </summary>
+    [DataField]
+    public bool UserCanOverride = true;
 }

@@ -1,11 +1,11 @@
-using System.Linq;
-using System.Text.RegularExpressions;
 using Content.Server.Speech.Components;
 using Content.Server.Speech.Prototypes;
 using Content.Shared.Speech;
 using JetBrains.Annotations;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
+using System.Linq;
+using System.Text.RegularExpressions;
 
 namespace Content.Server.Speech.EntitySystems
 {
@@ -21,6 +21,8 @@ namespace Content.Server.Speech.EntitySystems
 
         private readonly Dictionary<ProtoId<ReplacementAccentPrototype>, (Regex regex, string replacement)[]>
             _cachedReplacements = new();
+        private Regex _exasperation = new Regex($@"--\s*$", RegexOptions.IgnoreCase);
+        private Regex _samwiseGamgeeStewRecipe = new Regex($@"[aeiouy]+(?=\w)", RegexOptions.IgnoreCase);
 
         public override void Initialize()
         {
@@ -38,7 +40,7 @@ namespace Content.Server.Speech.EntitySystems
 
         private void OnAccent(EntityUid uid, ReplacementAccentComponent component, AccentGetEvent args)
         {
-            args.Message = ApplyReplacements(args.Message, component.Accent);
+            args.Message = ApplyReplacements(args.Message, component);
         }
 
         /// <summary>
@@ -104,6 +106,48 @@ namespace Content.Server.Speech.EntitySystems
             }
 
             return message;
+        }
+
+
+        /// <summary>
+        /// Overload to allow for overriding the message if the last message is the same as the current one, and the prototype allows for user overrides.
+        /// </summary>
+        /// <param name="lastMessage"></param>
+        /// <returns></returns>
+        public string ApplyReplacements(string message, ReplacementAccentComponent component)
+        {
+            if (!_proto.TryIndex<ReplacementAccentPrototype>(component.Accent, out var prototype))
+                return message;
+
+            // Kitty cat says Miau, Kitty cat afraid of thesaurus and other big words.
+            if (prototype.UserCanOverride)
+            {
+                // if exasperated add a em dash after every vowel cluster that does not end the word.
+                if (_exasperation.IsMatch(message))
+                {
+                    component.LastMessage = message;
+                    message = _exasperation.Replace(message, "");
+
+                    foreach (var (regex, _) in GetCachedReplacements(prototype))
+                    {
+                        message = regex.Replace(
+                            message,
+                            outerMatch => _samwiseGamgeeStewRecipe.Replace(outerMatch.Value, m => m.Value + "-")
+                        );
+                    }
+
+                    return message;
+                }
+
+                // if you've said the same thing twice don't apply replacements.
+                if (component.LastMessage == message)
+                {
+                    component.LastMessage = message;
+                    return message;
+                }
+            }
+            component.LastMessage = message;
+            return ApplyReplacements(message, component.Accent);
         }
 
         private (Regex regex, string replacement)[] GetCachedReplacements(ReplacementAccentPrototype prototype)
