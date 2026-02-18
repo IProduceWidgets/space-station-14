@@ -79,6 +79,7 @@
         - CannotSuicide
     - type: ReplacementAccent
       accent: genericAggressive
+      userCanOverride: false
     - type: Speech
       speechVerb: LargeMob
     - type: InteractionPopup

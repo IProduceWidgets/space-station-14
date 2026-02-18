@@ -119,6 +119,7 @@
   components:
   - type: ReplacementAccent
     accent: slimes
+    userCanOverride: false
   - type: GhostTakeoverAvailable
   - type: GhostRole
     makeSentient: true

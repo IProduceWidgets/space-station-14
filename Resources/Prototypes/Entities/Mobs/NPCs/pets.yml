@@ -350,6 +350,7 @@
       amount: 2
   - type: ReplacementAccent
     accent: dog
+    userCanOverride: false
   - type: InteractionPopup
     successChance: 0.5
     interactSuccessString: petting-success-dog
@@ -447,6 +448,7 @@
       amount: 3
   - type: ReplacementAccent
     accent: dog
+    userCanOverride: false
   - type: InteractionPopup
     successChance: 0.7
     interactSuccessString: petting-success-dog

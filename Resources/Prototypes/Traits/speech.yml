@@ -92,6 +92,7 @@
   components:
   - type: ReplacementAccent
     accent: liar
+    userCanOverride: false
 
 # 2 Cost
 

@@ -120,7 +120,7 @@ namespace Content.Server.Speech.EntitySystems
                 return message;
 
             // Kitty cat says Miau, Kitty cat afraid of thesaurus and other big words.
-            if (prototype.UserCanOverride)
+            if (component.UserCanOverride)
             {
                 // if exasperated add a em dash after every vowel cluster that does not end the word.
                 if (_exasperation.IsMatch(message))

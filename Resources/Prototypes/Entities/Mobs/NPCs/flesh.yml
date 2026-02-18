@@ -63,6 +63,7 @@
         Slash: 6
   - type: ReplacementAccent
     accent: genericAggressive
+    userCanOverride: false
 
 - type: entity
   parent: BaseMobFlesh
@@ -265,6 +266,7 @@
         Slash: 6
   - type: ReplacementAccent
     accent: genericAggressive
+    userCanOverride: false
   - type: SalvageMobRestrictions
 
 - type: entity

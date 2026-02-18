@@ -10,6 +10,7 @@
   # Custom names
   - type: ReplacementAccent
     accent: scurret
+    userCanOverride: false
   - type: Sprite
     layers:
     - map: ["enum.DamageStateVisualLayers.Base"]

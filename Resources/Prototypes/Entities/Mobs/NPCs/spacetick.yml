@@ -89,6 +89,7 @@
     solution: melee
   - type: ReplacementAccent
     accent: genericAggressive
+    userCanOverride: false
   - type: Speech
     speechVerb: SmallMob
   - type: NonSpreaderZombie

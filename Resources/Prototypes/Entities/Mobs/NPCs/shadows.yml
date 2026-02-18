@@ -52,6 +52,7 @@
   - type: Physics
   - type: ReplacementAccent
     accent: cat
+    userCanOverride: false
   - type: InteractionPopup
     successChance: 0.01 # you cant pet shadow cat... almost
     interactSuccessString: petting-success-cat

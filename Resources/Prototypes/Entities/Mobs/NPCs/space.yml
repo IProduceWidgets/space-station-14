@@ -104,6 +104,7 @@
       prob: 0.3
   - type: ReplacementAccent
     accent: genericAggressive
+    userCanOverride: false
   - type: Vocal
     sounds:
       Unsexed: Bear
@@ -167,6 +168,7 @@
       Unsexed: Kangaroo
   - type: ReplacementAccent
     accent: kangaroo
+    userCanOverride: false
   - type: Butcherable
     spawned:
     - id: FoodMeat
@@ -254,6 +256,7 @@
     transferAmount: 4
   - type: ReplacementAccent
     accent: xeno
+    userCanOverride: false
   - type: InteractionPopup
     successChance: 0.20
     interactSuccessString: petting-success-tarantula
@@ -360,6 +363,7 @@
       transferAmount: 6
     - type: ReplacementAccent
       accent: xeno
+      userCanOverride: false
     - type: InteractionPopup
       successChance: 0.2
       interactSuccessString: petting-success-snake

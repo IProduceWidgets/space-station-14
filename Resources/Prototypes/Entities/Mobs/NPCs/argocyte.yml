@@ -17,6 +17,7 @@
   - type: SolutionContainerManager
   - type: ReplacementAccent
     accent: xeno
+    userCanOverride: false
   - type: Bloodstream
     bloodReferenceSolution:
       reagents:

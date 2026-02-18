@@ -18,4 +18,11 @@ public sealed partial class ReplacementAccentComponent : Component
     /// </summary>
     [DataField]
     public string? LastMessage;
+
+    /// <summary>
+    /// Allows the user to override the accent by saying the same string twice.
+    /// or with dashes if their message ends in "--"
+    /// </summary>
+    [DataField]
+    public bool UserCanOverride = true;
 }

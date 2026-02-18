@@ -129,6 +129,7 @@
             Heat: 1
   - type: ReplacementAccent
     accent: tomatoKiller
+    userCanOverride: true # all my homies love vegietales
   - type: Item
     size: Large
     shape:
