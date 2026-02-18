@@ -126,10 +126,15 @@ namespace Content.Server.Speech.EntitySystems
                 if (_exasperation.IsMatch(message))
                 {
                     component.LastMessage = message;
-                    message = _exasperation.Replace(message, "");
+
+                    // uncomment to remove the double-dash -- at the end of the message.
+                    // I decided to leave it in because we keep double bangs !! and etc.
+                    //
+                    // message = _exasperation.Replace(message, "");
 
                     foreach (var (regex, _) in GetCachedReplacements(prototype))
                     {
+                        // Po-ta-toes, boil 'em mash 'em stick 'em in a stew. Even you couldn't say no to 'at.
                         message = regex.Replace(
                             message,
                             outerMatch => _samwiseGamgeeStewRecipe.Replace(outerMatch.Value, m => m.Value + "-")

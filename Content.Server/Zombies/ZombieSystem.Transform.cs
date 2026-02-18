@@ -152,7 +152,9 @@ public sealed partial class ZombieSystem
         if (TryComp<ZombieAccentOverrideComponent>(target, out var accent))
             accentType = accent.Accent;
 
-        EnsureComp<ReplacementAccentComponent>(target).Accent = accentType;
+        EnsureComp<ReplacementAccentComponent>(target, out var accentComp);
+        accentComp.Accent = accentType;
+        accentComp.UserCanOverride = false;
 
         //This is needed for stupid entities that fuck up combat mode component
         //in an attempt to make an entity not attack. This is the easiest way to do it.

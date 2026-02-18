@@ -287,9 +287,9 @@ namespace Content.Server.GameTicking
                 AddComp<OwOAccentComponent>(mob);
             }
 
-            // Well now, partner… hate to tip my hat an’ break it to ya,
-            // but now I’m camped out deep in the bargainin’ stage o’ grief,
-            // boots in the stirrups an’ dickerin’ with fate like it owes me money.
+            // Well now, partner... hate to tip my hat an' break it to ya,
+            // but now I'm camped out deep in the bargainin' stage o' grief,
+            // annie'd up, boots in the stirrups an' dickerin' with fate like it owes me money.
             // Ya hear.
             if (player.UserId == new Guid("{9aa6eadc-8fa1-40f7-80c5-1d64845efbbe}"))
             {
